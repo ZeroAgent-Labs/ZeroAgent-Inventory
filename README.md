@@ -18,7 +18,6 @@ Perfect for MSPs, Sysadmins, and One-Person IT departments who need quick audits
 * **Portable:** No installation required. Runs from a USB drive or network share.
 * **Agentless:** Does not run in the background. Runs only when you execute it.
 * **Safe & Private:** 100% open-source PowerShell. No data is sent to the Internet.
-    * *（※ここを「公開されているのはスクリプトのみ」という意図にするなら、`open-source PowerShell` の部分を `PowerShell script` に修正してもOKです）*
 * **Comprehensive Data:**
     * **System:** Hostname, OS, CPU, RAM, GPU.
     * **Storage:** Disk usage, Total/Free GB (detect low disk space instantly).
