@@ -5,6 +5,10 @@
 
 👉 **[Get Zero Agent Viewer on Gumroad (Instant Download)](https://zeroagentlabs.gumroad.com/l/Zero-Agent-Viewer)**
 
+## Start here (recommended workflow)
+- How to run a yearly inventory (no agents): https://zeroagent-labs.github.io/blog/
+- Live sample report (dummy data): https://zeroagent-labs.github.io/za-sample-report/
+
 ---
 
 Lightweight, Agentless IT Asset Management for Windows. Zero dependencies, Zero installation, Privacy-first.
