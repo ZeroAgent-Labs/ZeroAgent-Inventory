@@ -30,3 +30,14 @@ Run the script on the target Windows PC.
 Open PowerShell as Administrator and run:
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File .\Collect-PC-Inventory.ps1
+```
+
+📊 Don't want to parse raw JSON? (Optional GUI)
+If you are managing dozens of machines, reading raw JSON files manually can be painful. My team uses a pre-compiled GUI viewer we built that aggregates these JSONs into static, filterable HTML dashboards.
+
+If you want to save time building your own parser, you can grab the standalone GUI tool here:
+👉 [Get Zero Agent Viewer on Gumroad]
+
+Live sample report (dummy data): https://zeroagent-labs.github.io/za-sample-report/
+
+Workflow guide: https://zeroagent-labs.github.io/blog/
