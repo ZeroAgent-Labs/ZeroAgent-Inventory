@@ -31,7 +31,6 @@ Open PowerShell as Administrator and run:
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File .\Collect-PC-Inventory.ps1
 ```
-
 📊 Don't want to parse raw JSON? (Optional GUI)
 If you are managing dozens of machines, reading raw JSON files manually can be painful. My team uses a pre-compiled GUI viewer we built that aggregates these JSONs into static, filterable HTML dashboards.
 
