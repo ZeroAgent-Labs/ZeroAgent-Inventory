@@ -1,41 +1,43 @@
-# Zero Agent Inventory
-
-## 💎 Professional Viewing & Management Tool
-**Need a GUI to manage your collected data efficiently?** The Zero Agent Collector script is free, but the raw JSON output is difficult to handle. Access the pre-compiled **Zero Agent Viewer** for a beautiful, filtering-enabled dashboard and priority support.
-
-👉 **[Get Zero Agent Viewer on Gumroad (Instant Download)](https://zeroagentlabs.gumroad.com/l/Zero-Agent-Viewer)**
-
-## Start here (recommended workflow)
-- How to run a yearly inventory (no agents): https://zeroagent-labs.github.io/blog/
-- Live sample report (dummy data): https://zeroagent-labs.github.io/za-sample-report/
-
----
+# Zero Agent Inventory Collector
 
 Lightweight, Agentless IT Asset Management for Windows. Zero dependencies, Zero installation, Privacy-first.
 
-### ❓ Why ZeroAgent?
-Managing IT assets shouldn't require installing heavy agents or setting up complex servers. **ZeroAgent Inventory** is a portable PowerShell script that collects detailed hardware and software information from Windows PCs without leaving a trace.
+Managing IT assets shouldn't require installing heavy background agents or setting up complex servers. This portable PowerShell script collects detailed hardware, software, and security information from offline/air-gapped Windows PCs without leaving a trace. Output is saved locally as a structured JSON file.
 
-Perfect for MSPs, Sysadmins, and One-Person IT departments who need quick audits.
+Perfect for MSPs, Sysadmins, and One-Person IT departments who need quick, secure audits.
 
-### ✅ Features
-* **Portable:** No installation required. Runs from a USB drive or network share.
-* **Agentless:** Does not run in the background. Runs only when you execute it.
-* **Safe & Private:** 100% open-source PowerShell. No data is sent to the Internet.
-* **Comprehensive Data:**
-    * **System:** Hostname, OS, CPU, RAM, GPU.
-    * **Storage:** Disk usage, Total/Free GB (detect low disk space instantly).
-    * **Network:** IP Address (IPv4), MAC Address.
-    * **Software:** Full list of installed applications (analyzes Registry).
+## ✅ Features
 
-### ⚙️ Installation & Usage
+*   **Portable:** No installation required. Runs from a USB drive or network share.
+*   **Agentless:** Does not run in the background. Runs only when you execute it.
+*   **Safe & Private:** 100% open-source PowerShell. No data is sent to the Internet.
+*   **Comprehensive Data Collected:**
+    *   **System:** Hostname, OS, CPU, RAM, GPU, Serial Number.
+    *   **Storage:** Disk usage, Total/Free GB (detect low disk space instantly).
+    *   **Network:** IP Address (IPv4), MAC Address.
+    *   **Software:** Full list of installed applications.
+    *   **Security:** BitLocker encryption status, Antivirus/Defender signature dates, Windows Update pending reboots, Local Administrators list.
 
-#### Step 1: Download
-Download `ZeroAgentCollector.ps1` from the file list above.
+## ⚙️ Installation & Usage
 
-#### Step 2: Collect Data (Client Side)
-Run the script on the target Windows PC (Administrator privileges recommended for full details).
+**Step 1: Download**
+Download `Collect-PC-Inventory.ps1` to your USB drive or local machine.
 
+**Step 2: Collect Data (Client Side)**
+Run the script on the target Windows PC. 
+*(Note: Administrator privileges are required to retrieve BitLocker and security statuses. If run as a standard user, security details will be marked as unknown).*
+
+Open PowerShell as Administrator and run:
 ```powershell
-# Run via PowerShell
-.\ZeroAgent_Collector.ps1
+powershell.exe -ExecutionPolicy Bypass -File .\Collect-PC-Inventory.ps1
+The script will create a json folder in the same directory and save the output there.
+
+📊 Don't want to parse raw JSON? (Optional GUI)
+If you are managing dozens of machines, reading raw JSON files manually can be painful. My team uses a pre-compiled GUI viewer we built that aggregates these JSONs into static, filterable HTML dashboards.
+
+If you want to save time building your own parser, you can grab the standalone GUI tool here:
+👉 [Get Zero Agent Viewer on Gumroad]
+
+Live sample report (dummy data): https://zeroagent-labs.github.io/za-sample-report/
+
+Workflow guide: https://zeroagent-labs.github.io/blog/
